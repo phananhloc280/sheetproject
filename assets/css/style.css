@@ -12,12 +12,10 @@
        url('../fonts/patua-one-v11-latin-regular.svg#PatuaOne') format('svg'); /* Legacy iOS */
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800;900&display=swap');
 
 
-h2 {
-  font-family:  'Patua One';
-  font-weight: normal;
-}
+
 em {
   display: inline-block;
   background: #e5f1ff;
@@ -209,76 +207,34 @@ border: 1px solid #eaecee;
     .extra-options {
       display: none;
       position: absolute;
-      top: 100%;
+      top: 92%;
       margin-top: 4px;
       left: 0;
       background: white;
       z-index: 999;
       border-radius: 4px;
       background: white;
-/*       border: 2px solid rgb(241, 241, 241);
-      border-bottom: 4px solid rgb(241,241,241); */
+      border: 2px solid rgb(241, 241, 241);
+      border-bottom: 4px solid rgb(241,241,241);
       padding: 4px 0;
-      box-shadow: rgba(0,0,0,.35) 0 1px 4px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      font-size: 13px;
     }
 
     .extra-options > div {
       padding: 8px 20px;
       cursor: pointer;
       white-space: pre;
+      text-align: start;
     }
 
     .extra-options > div:hover {
-      background: #0078ff;
-      color: white;
+      background: #C5C5C5;
+      color: black;
+      transition: all ease .3s;
     }
 
-    .button-extras {
-      box-sizing: border-box;
-
-      cursor: pointer;
-      height: 44px;
-      border-radius: 6px;
-      padding: 0;
-      width: 28px;
-  /*     margin-left: 6px; */
-      display: inline-block;
-      
-      background: rgb(221, 221, 221);
-      border: 2px solid rgb(221, 221, 221);
-      border-bottom: 4px solid rgb(201,201,201);
-      /* color: #009f7e; */
-      text-decoration: none;
-      line-height: 44px;
-      font-family: monospace;
-      font-size: 1.4em;
-      font-weight: bold;
-
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-left: none;
-
-      margin-left: -8px;
-      position: relative;
-    }
-
-    .button-extras div {
-      position: absolute;
-      width: 20px;
-      height: 44px;
-      left: 50%;
-      margin-left: -4px;
-    }
-
-    .button-extras:hover {
-      background-color:  rgb(231,231,231);
-      border-color:  rgb(201,201,201);
-/* 
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-      border-left: 2px solid rgb(201, 201, 201); */
-
-    }
+    
 
     button,
     [type="file"] + label {
@@ -292,9 +248,7 @@ border: 1px solid #eaecee;
   /*     margin-left: 6px; */
       display: inline-block;
       
-      background: rgb(221, 221, 221);
-      border: 2px solid rgb(221, 221, 221);
-      border-bottom: 4px solid rgb(201,201,201);
+      
       /* color: #009f7e; */
       text-decoration: none;
       line-height: 44px;
@@ -304,13 +258,6 @@ border: 1px solid #eaecee;
       color: black;
 
     }
-
-    button:hover,
-    [type="file"] + label:hover {
-      background-color:  rgb(231,231,231);
-      border-color:  rgb(201,201,201);
-    }
-
 
 [type="file"] {
   border: 0;
@@ -324,39 +271,32 @@ border: 1px solid #eaecee;
 }
 
 
-
-    button.icon-button,
-    button.color-button {
-      width:  40px;
-      padding:  0;
+    #header_icon {
+      margin: 0px 10px;
+    }
+    .icon-button {
+      margin: 10px 2px!important;
+      padding: 2px 2px!important;
+      font-size: 18px;  
+      height: 30px;
+      background: transparent;
+      border: none;
     }
 
-    .btn-blue {
-      background:  #e1f0ff;
-    }
-
-    .btn-pink {
-      background: #ffe1f0;
-    }
-
-    .btn-green {
-      background: #f0ffe1;
+    .icon-button i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
     }
 
     #app-header {
       display: flex;
       padding:  0;
-      height:  60px;
       align-items:  center;
-      /* background:  #2dcfdb; */
       box-sizing: border-box;
-      right: 600px;
-      position: absolute;
-      top: 0;
-      left: 0;
       justify-content: space-between;
       width: 100vw;
-      border-right: 1px solid #cecece;
     }
 
     #app-status {
@@ -365,7 +305,7 @@ border: 1px solid #eaecee;
     }
 
     #app-title {
-      font-size: 1.2em;
+      font-size: 10px;
     }
 
     #app-title img {
@@ -374,9 +314,7 @@ border: 1px solid #eaecee;
     }
 
     #app-file-name {
-      font-size: 1.2em;
-      height: 44px;
-      line-height: 44px;
+      font-size: 12px;
       border-radius: 8px;
       padding: 0 20px;
       display: flex;
@@ -388,26 +326,31 @@ border: 1px solid #eaecee;
       user-select: none;
     }
 
-    #app-file-name:not(.editing):hover {
-
-      background: #f4f4f4;
+    #app-file-name.editing input{
+      background-color: white;
+      padding: 5px 10px;
+      color: black;
+      border: solid .5px #C5C5C5;
+      width: 200px;
     }
+
+    #app-file-name.editing input:focus {
+      border: solid .5px #7c7b7b;
+      outline: none; 
+    }
+
+    #app-file-name.editing div {
+      position: relative;
+      right: 0;
+      top: 5px;
+      left: 5px;
+    }
+
 
     #app-save-state {
       font-size: .8em;
     }
 
-    #toolbar {
-      padding:  0 8px;
-      height:  60px;
-      box-sizing: border-box;
-      flex-grow:  1;
-      display:  flex;
-      justify-content:  space-between;
-      align-items:  center;
-
-      margin-right: 26px;
-    }
 
   	#main {
   		/* https://blog.opendigerati.com/the-eccentric-ways-of-ios-safari-with-the-keyboard-b5aa3f34228d */
@@ -425,15 +368,10 @@ border: 1px solid #eaecee;
   	}
 
     #grid {
-
-      position:  absolute;
-      top:  60px; /* 24 + 48 */
-      left:  0;
-      right:  0px;
-      bottom:  0px;
+      position: relative!important;
+      top: 0px;
       box-sizing:  border-box;
-      height: 100%;
-
+      height: calc(100vh - 106px)!important;
     }
 
 
@@ -647,7 +585,7 @@ border: 1px solid #eaecee;
       transform: translate(-50%, -33%);
       max-width: 600px;
       width: 100%;
-      height: 400px;
+      height: 340px;
       max-height: 100vh;
       background: white;
       z-index: 99999;
@@ -657,6 +595,7 @@ border: 1px solid #eaecee;
       border-top: 60px solid #f4f4f4;
       border-bottom: 60px solid #f4f4f4;
       box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
     #dialog input {
@@ -665,13 +604,14 @@ border: 1px solid #eaecee;
       margin: 24px 0;
       padding: 8px 12px;
       font-size: 1.2em;
+      font-family: 'Poppins', sans-serif;
     }
 
     #dialog textarea {
       width: 100%;
       box-sizing: border-box;
       height: 100%;
-
+      font-family: 'Poppins', sans-serif;
     }
 
 
@@ -686,19 +626,29 @@ border: 1px solid #eaecee;
       top: -60px;
       left: 0;
       right: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #217346;
+      color: white;
     }
 
     .dialog-title {
       padding-left: 20px;
-      font-size: 1.5em;
-      font-family: 'Patua One';
+      font-size: 1.3em;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
     }
 
     .dialog-header button {
       width: 40px;
       padding: 0;
-      font-size: 2em;
+      border: none;
       margin-right: 8px;
+      font-family: 'Poppins', sans-serif;
+      background: transparent;
+      color: white;
+    }
+    .dialog-header button i {
+      font-size: 15px;
     }
 
     .dialog-content {
@@ -708,7 +658,9 @@ border: 1px solid #eaecee;
       right: 0;
       bottom: 0;
       left: 0;
-      font-size: 1.1em;
+      font-size: 14px;
+      font-family: 'Poppins', sans-serif;
+      
     }
 
     .dialog-actions {
@@ -720,10 +672,24 @@ border: 1px solid #eaecee;
       padding: 0 20px;
       display: flex;
       align-items: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .dialog-actions button {
+      width: 80px;
+      border: solid 1px ;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+    }
+
+    .dialog-actions button:hover {
+      background:#217346;
+      color: white;
+      transition: all ease .3s;
     }
 
     textarea#csv-textarea {
-      border: 2px solid #cecece;
+      border: 1px solid #cecece;
     }
 
     textarea#csv-textarea.textarea-error {
@@ -732,12 +698,11 @@ border: 1px solid #eaecee;
     }
 
     input#url-input {
-       border: 2px solid #cecece;
-       border-radius: 4px;
+       border: 1px solid #cecece;
     }
 
     input#url-input.input-error {
-      background: pink;
+      background: rgb(241, 218, 222);
       border-color: red;
     }
 
@@ -895,3 +860,125 @@ border: 1px solid #eaecee;
   display: absolute!important ;
   top: 100px;
 }
+
+
+#header_section {
+  display: flex;
+  width: 100vw;
+  background-color: #217346;
+}
+
+#app-header {
+  display: block;
+  position: relative!important;
+}
+
+#header_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+#app-file-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#app-file-name {
+  color: white;
+  font-size: 13px;
+}
+
+#toolbar {
+  display: flex;
+  align-items: center;
+}
+
+.tool-button button,
+.tool-button input,
+.tool-button label {
+  border: none;
+  background: none;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.button-extras {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 41px;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  width: 20px;
+
+}
+
+.button-extras:hover {
+  background-color: #888;
+  color: white;
+  transition: all ease .3s;
+}
+
+
+.tool-button {
+  width: 80px;
+  text-align: center;
+  background-image: linear-gradient(to right, #217346, #217346); 
+  background-position: 0 100%; 
+  background-repeat: no-repeat;
+  background-size: 0% 3px; 
+  transition: background-size 0.3s; 
+}
+.tool-button:hover {
+  background-size: 100% 3px;
+}
+
+#clean-button {
+  width: 130px;
+}
+
+#calculate {
+  margin-top: 10px;
+  width: 100vw;
+}
+
+#calculate div {
+  width: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #C5C5C5;
+  padding:5px;
+  border: solid .7px grey;
+}
+
+
+#calculate input {
+  width: calc(100vw - 47px);
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 0;
+  border: solid .7px grey;
+  padding: 5px 10px;
+}
+
+#calculate div i {
+  font-size: 20px;
+  color: black;
+
+}
+
+#calculate input:focus {
+  border: 1px solid #007bff; 
+  outline: none; 
+}
+
