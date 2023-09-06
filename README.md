@@ -6,7 +6,7 @@
 <div align="center"><strong><span style="font-size: 15px; color: #FF5733;">SPREADSHEET WEBSITE</span></strong></div>
 </br>
 Authors:
-<br>1. Phan Anh Lộc (Chairman of Project)
+<br>1. Phan Anh Lộc (Chairman of the Project)
 <br>2. Văn Phong (Member)
 
-
+Link Download: https://drive.google.com/drive/folders/1l64UPMhAVN0mNXpbbGsNNsKAGrySeJu8?usp=sharing
