@@ -46,12 +46,10 @@ window.app = {
   },
 
   createNew: function() {
-    document_data = DataGridXL.createEmptyData(100,20);
-    document_title = 'untitled';
-
-    grid.setData(document_data);
-    grid.selectCells({x:0,y:0});
-    document.getElementById('app-file-name').textContent = document_title + document_suffix;
+    window.grid = new DataGridXL("grid", {
+      data: [["","",""],["","",""],["","",""]],
+      instantActivate: true
+    });
   },
 
   cleanData: function(document_title) {
@@ -84,15 +82,21 @@ window.submodule = {
 
   // Load WEB data function
   loadRemoteFile: function(url) {
-    if(!isValidUrl(url)){
+    if (!submodule.isValidUrl(url)) {
       document.getElementById('url-input').classList.add('input-error');
     } else {
       Papa.parse(url, {
         download: true,
-        complete: function(e){
-
+        header: true, 
+        dynamicTyping: true,
+        skipEmptyLines: true, 
+        complete: function(results) {
+          console.log(results.data); 
+          displayFileContent("Data from URL", results.data);
+          closeDialog();
         },
-        error: function(){
+        error: function(error) {
+          console.error(error.message);
           document.getElementById('url-input').classList.add('input-error');
         }
       });
@@ -107,8 +111,7 @@ window.submodule = {
       document.getElementById('csv-textarea').classList.add('textarea-error');
       // ERROR!
     } else {
-      document_data = parsed_object.data;
-      grid.setData(document_data);
+      grid.setData(parsed_object.data);
       closeDialog();
       grid.selectCells({x:0,y:0});
     }

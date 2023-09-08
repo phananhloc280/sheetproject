@@ -32,7 +32,7 @@ export function readSingleFile(e) {
                 resolve(processedResult);
             });
         } else {
-            notiFrame.noti('Error', 'Unsupported file format.');
+            notiFrame.error('Error', 'Unsupported file format.');
             reject('Unsupported file format');
         }
     });
